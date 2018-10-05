@@ -21,4 +21,13 @@ export class UserapiService {
     return this.http.get(apiUrl, httpOptions);
   }
 
+  postUser(data): Observable<any> {
+    return this.http.post(apiUrl, data, httpOptions);
+  }
+
+  deleteUser(id): Observable<any> {
+    const deleteUrl = apiUrl + '/' + 'id';
+    console.log(deleteUrl);
+    return this.http.delete(deleteUrl, httpOptions);
+  }
 }

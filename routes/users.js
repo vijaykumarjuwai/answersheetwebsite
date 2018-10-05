@@ -1,5 +1,3 @@
-
-
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
@@ -31,5 +29,15 @@ router.post('/', (req, res, next) => {
     res.json(post);
   });
 });
+
+router.delete('/:id', (req, res, next) => {
+  User.findByIdAndRemove(req.params.id, (err, post) => {
+    if (err) {
+      return next(err);
+    }
+    res.json(post);
+  });
+});
+
 
 module.exports = router;

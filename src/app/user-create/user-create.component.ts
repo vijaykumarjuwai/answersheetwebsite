@@ -23,6 +23,14 @@ export class UserCreateComponent implements OnInit {
   }
 
   onSubmit(): any {
+    this.api.postUser(this.user).subscribe((res) => {
+      console.log(res);
+    });
     console.log(this.user);
+    this.user = {
+      name: '',
+      email: '',
+      password: ''
+    };
   }
 }

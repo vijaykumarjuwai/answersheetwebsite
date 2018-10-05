@@ -10,6 +10,7 @@ import { UsersComponent } from './users/users.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserCreateComponent } from './user-create/user-create.component';
 import { FormsModule } from '@angular/forms';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 // Below we specify the frontend routes,
 // this is an array of all front-end routes.
@@ -30,6 +31,10 @@ const appRoutes: Routes = [
     path: 'user-create',
     component: UserCreateComponent
   },
+  {
+    path: 'contact',
+    component: ContactFormComponent
+  },
   // below we define the default route if no route is given
   // pathMatch
   {
@@ -45,7 +50,8 @@ const appRoutes: Routes = [
     TestsComponent,
     UsersComponent,
     UserDetailComponent,
-    UserCreateComponent
+    UserCreateComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
